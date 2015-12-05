@@ -6,9 +6,7 @@
  * Time: 1:01 PM
  */
 session_start();
-include("../../domainmodel/CV.php");
-include("../../domainmodel/Education.php");
-include("../../domainmodel/ProfessionalExperience.php");
+include("../../common/autoloader.php");
 if(isset($_POST["save"])){
     $_SESSION["cv"] = new CV($_POST["txtCareerLevel"]);
 

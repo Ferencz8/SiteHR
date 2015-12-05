@@ -25,7 +25,7 @@ if(isset($_POST["btnLogin"])){
                 $_SESSION['user'] = $usr ->username;
 
 
-                header("Location: ../view/candidate/accountView.php");
+                header("Location: ../view/candidate/homeView.php");
                 break;
             }
             else {
@@ -37,5 +37,10 @@ if(isset($_POST["btnLogin"])){
 }
 if(isset($_POST["btnSignup"])){
     header("Location: ../view/candidate/signupCandidateView.php");
+}
+if(isset($_POST["btnLogOut"])){
+//    clear the seesion
+    session_unset();
+    header("Location: ../view/startView.php");
 }
 ?>
