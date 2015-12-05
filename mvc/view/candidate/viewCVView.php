@@ -23,6 +23,7 @@ if (isset($_SESSION["cv"])) {//&& user e autentificat
     <link rel="stylesheet" type="text/css" href="../../resources/css/own.css">
 </head>
 <body>
+<?php require("headerView.php");?>
 <div class="navabar container">
     <p>Edit CV</p>
 

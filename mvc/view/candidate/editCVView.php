@@ -42,6 +42,7 @@ if (isset($_POST["btnAddProfessionalExperience"])) {
     <link rel="stylesheet" type="text/css" href="../../resources/css/own.css">
 </head>
 <body>
+<?php require("headerView.php");?>
 <div class="navabar container">
     <p>Edit CV</p>
 

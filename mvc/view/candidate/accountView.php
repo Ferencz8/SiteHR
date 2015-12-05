@@ -19,22 +19,9 @@ $_SESSION["allJobs"] = $jobRepository -> getAllJobs();
     <link rel="stylesheet" type="text/css" href="../../resources/css/own.css">
 </head>
 <body>
-<div class="navabar">
-    <p>Candidat Home</p>
+<?php require("headerView.php");?>
 
-    <div>
-        <div class="col-lg-2">
-            <a href="">Home</a>
-        </div>
-        <div class="col-lg-2">
-            <a href="editCVView.php">Edit CV</a>
-        </div>
-        <div class="col-lg-2">
-            <a href="viewCVView.php">View CV</a>
-        </div>
-    </div>
-
-</div>
+<p>Candidat Home</p>
 <div>
     <div>Filters</div>
     <div class="row">

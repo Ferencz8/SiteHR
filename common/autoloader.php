@@ -12,7 +12,7 @@
 //        $direc = getcwd();
         $di = new RecursiveDirectoryIterator("C:\\xampp\\htdocs\\php-get-started\\SiteHR");
         foreach (new RecursiveIteratorIterator($di) as $filename => $file) {
-            echo $filename . ' - ' . $file->getSize() . ' bytes <br/>';
+            //echo $filename . ' - ' . $file->getSize() . ' bytes <br/>';
             if ($file -> getFilename() === $fileName.".php")
             {
                 $path = $filename;
