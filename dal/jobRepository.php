@@ -12,5 +12,11 @@ class JobRepository{
         global $jobs;
         return $jobs;
     }
+
+    public function getJobs($userId){
+        //TODO:: implement checking for $userId & db access
+        global $specificJobs;
+        return $specificJobs;
+    }
 }
 ?>

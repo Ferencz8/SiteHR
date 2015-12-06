@@ -12,7 +12,8 @@ class User
     private $username;
     private $password;
 
-    function __construct($un, $p){
+    function __construct($id, $un, $p){
+        $this -> id = $id;
         $this -> username = $un;
         $this -> password = $p;
     }

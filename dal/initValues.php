@@ -9,6 +9,6 @@ include("C:\\xampp\\htdocs\\php-get-started\\SiteHR\\domainmodel\\BaseModel.php"
 include("C:\\xampp\\htdocs\\php-get-started\\SiteHR\\domainmodel\\Job.php");
 include("C:\\xampp\\htdocs\\php-get-started\\SiteHR\\domainmodel\\Company.php");
 $j = new Job("", "TestTitle", "", "", "", new Company("", "Software"));
-$jobs = array($j);
-
+$jobs = array($j, new Job("", "Title 2", "", "", "", new Company("", "Software")));
+$specificJobs = array(new Job("", "Specific Title", "", "", "", new Company("", "Software")));
 ?>

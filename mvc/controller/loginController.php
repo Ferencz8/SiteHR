@@ -5,11 +5,12 @@
  * Date: 11/14/2015
  * Time: 4:47 PM
  */
+
+require("../../domainmodel/User.php");
+session_start();
+include("../../common/autoloader.php");
 //include afiseaza un warning in caz de eroare si trece mai departe
 include "init.php";
-//require_once afiseaza un fatal error si nu mai merge mai departe
-//require_once("../../domainmodel/User.php");
-include("../../common/autoloader.php");
 
 if(isset($_POST["btnLogin"])){
     if(strlen($_POST["txtUsername"]) == 0 || strlen($_POST["txtPassword"]) == 0){
@@ -17,12 +18,9 @@ if(isset($_POST["btnLogin"])){
         header("Location: ../view/candidate/loginCandidateView.php");
     }
     else{
-        foreach($_SESSION["users"] as $key => $value){
-            $userObjects[] = new User($key, $value);
-        }
-        foreach($userObjects as $usr){
+        foreach($_SESSION["users"] as $usr){
             if($_POST["txtUsername"] == $usr -> username && $_POST["txtPassword"] == $usr -> password){
-                $_SESSION['user'] = $usr ->username;
+                $_SESSION['loggedUser'] = $usr;
 
 
                 header("Location: ../view/candidate/homeView.php");
@@ -39,7 +37,7 @@ if(isset($_POST["btnSignup"])){
     header("Location: ../view/candidate/signupCandidateView.php");
 }
 if(isset($_POST["btnLogOut"])){
-//    clear the seesion
+//    clear the sesion
     session_unset();
     header("Location: ../view/startView.php");
 }

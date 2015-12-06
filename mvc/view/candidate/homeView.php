@@ -7,17 +7,17 @@
  */
 
 include ("../../../common/autoloader.php");
-include("../../../dal/jobRepository.php");
+require("../../../domainmodel/User.php");
+require("../../../dal/jobRepository.php");
 session_start();
 
 $jobRepository = new JobRepository();
-//if(isset($_SESSION["user"])){
-//    $_SESSION["allJobs"] = $jobRepository->getJobs($userId);
-//}
-//else {
-//    $_SESSION["allJobs"] = $jobRepository->getAllJobs();
-//}
-$_SESSION["allJobs"] = $jobRepository->getAllJobs();
+if(isset($_SESSION["loggedUser"])){
+    $_SESSION["allJobs"] = $jobRepository->getJobs($_SESSION["loggedUser"]->id);
+}
+else {
+    $_SESSION["allJobs"] = $jobRepository->getAllJobs();
+}
 ?>
 <html>
 <head>
@@ -28,7 +28,7 @@ $_SESSION["allJobs"] = $jobRepository->getAllJobs();
 <body>
 <div class="container">
     <?php
-    if( isset($_SESSION["user"])) {
+    if( isset($_SESSION["loggedUser"])) {
         require("headerView.php");
     }
     else{
