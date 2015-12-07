@@ -26,15 +26,15 @@ session_start();
             <fieldset>
                 <legend>SignUp</legend>
                 <div>
-                    <span>First Name</span>
+                    <span>First Name *</span>
                     <input type="text" name="txtFirstName"/>
                 </div>
                 <div>
-                    <span>Last Name</span>
+                    <span>Last Name *</span>
                     <input type="text" name="txtLastName"/>
                 </div>
                 <div>
-                    <span>BirthDate</span>
+                    <span>BirthDate *</span>
                     <input type="date" name="txtBirthDate"/>
                 </div>
                 <div>
@@ -42,11 +42,11 @@ session_start();
                     <input type="text" name="txtAddress"/>
                 </div>
                 <div>
-                    <span>Phone</span>
+                    <span>Phone *</span>
                     <input type="text" name="txtPhone"/>
                 </div>
                 <div>
-                    <span>Email</span>
+                    <span>Email *</span>
                     <input type="text" name="txtEmail"/>
                 </div>
                 <input type="submit" name="btnnext" value="Next"/>
