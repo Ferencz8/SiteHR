@@ -21,30 +21,37 @@ $_SESSION["txtEmail"] = $_POST["txtEmail"];
     <link rel="stylesheet" type="text/css" href="../../resources/css/own.css">
 </head>
 <body>
-<div class="center">
-    <p>Candidat Signup</p>
+<div class="container">
+    <?php require("../startHeaderView.php"); ?>
+    <br/><br/><br/><br/>
 
-    <form method="post" action="../../controller/signupController.php">
+    <div class="col-lg-offset-4">
+        <h3>Candidat Signup</h3>
 
-        <!--        <div class="error">--><?php //echo $_SESSION["err"]; ?><!--</div>-->
+        <form method="post" action="../../controller/signupController.php">
 
-        <div>
-            <div>Username</div>
-            <input type="text" name="txtUsername"/>
-        </div>
-        <div>
-            <div>Password</div>
-            <input type="password" name="txtPassword"/>
-        </div>
-        <div>
-            <div">Confirm Password</div>
-            <input type="password" name="txtConfirmPassword"/>
-        </div>
-        <br>
-        <a name="btnBack" class="btn btn-success" href="signupCandidateView.php">Back</a>
-        <input type="submit" name="btnForward" value="Forward" class="btn btn-danger"/>
+            <!--        <div class="error">--><?php //echo $_SESSION["err"]; ?><!--</div>-->
+
+            <div>
+                <div>Username</div>
+                <input type="text" name="txtUsername"/>
+            </div>
+            <div>
+                <div>Password</div>
+                <input type="password" name="txtPassword"/>
+            </div>
+            <div>
+                <div>Confirm Password
+                </div>
+                <input type="password" name="txtConfirmPassword"/>
+            </div>
+            <br>
+            <a name="btnBack" class="btn btn-success" href="signupCandidateView.php">Back</a>
+            <input type="submit" name="btnForward" value="Forward" class="btn btn-danger"/>
+
+
+        </form>
+    </div>
 </div>
-
-</form>
 </body>
 </html>

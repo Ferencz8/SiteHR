@@ -15,7 +15,7 @@ if( end($array) === 'startView.php'){
     $startViewPath = "startView.php";
     $homeViewPath = "candidate/homeView.php";
 }
-else if( end($array) === 'homeView.php' || end($array) === 'loginCandidateView.php'){
+else if( end($array) === 'homeView.php' || end($array) === 'loginCandidateView.php' || end($array) === 'signupCandidateView.php' || end($array) === 'signupCandidate2View.php'){
 
     $startViewPath = "../startView.php";
     $homeViewPath = "homeView.php";
